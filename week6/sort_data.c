@@ -1,7 +1,7 @@
 #include<stdio.h> 
 
 int main() { 
-    int a[100], b, i, j, n; 
+    int a[100], buffer, i, j, n;
     // input data ไปเรื่อยๆ 
     for ( i = 1;; i++)
     {
@@ -16,9 +16,9 @@ int main() {
         {
             if (a[i] < a[j]) continue;
             else { 
-                b = a[i]; 
+                buffer = a[i]; 
                 a[i] = a[j]; 
-                a[j] = b;
+                a[j] = buffer;
             }
             
         }
