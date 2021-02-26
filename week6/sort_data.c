@@ -9,9 +9,12 @@ int main() {
         scanf("%d", &a[i]); 
         if(a[i] < 0) break; 
     }
+
+    // sort data from input
     n = i - 1; // ลบตำแหน่งสุดท้ายไป
     for ( i = 1; i < n; i++)
     {
+        //  เปรียบเทียบกับ data ที่ i + 1 
         for (j = i+ 1; j <= n; j++)
         {
             if (a[i] < a[j]) continue;
@@ -25,6 +28,7 @@ int main() {
         
     }
 
+    // เรียง data ใหม่ ภายใน Arrays 
     for ( i = 1; i <= n; i++)
     {
         printf("a[%d] = %d\n", i, a[i]); 

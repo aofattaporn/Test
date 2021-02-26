@@ -1,5 +1,6 @@
 #include<stdio.h> 
 int main() { 
+    // เป็นการ search คำจากการใช้ else_if
     char word[40]; 
     int i, n=0; 
     printf("input sentence :"); 
