@@ -15,6 +15,7 @@ int main() {
             if (w[j]>=65 && w[j]<=90) after=w[j]; 
                 else after = w[j]-32;
             
+            
             if (befor<=after)continue;
             else // k > m
             { 
