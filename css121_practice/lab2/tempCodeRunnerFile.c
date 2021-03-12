@@ -13,7 +13,7 @@ int main() {
         if (num[i] < 0) break;
     }
     printf("Odd number  :");
-    for (j = 0; j < i; j++)
+    for (j = 1; j < i; j++)
     {
         if (num[j]%2 != 0)
         {

@@ -23,7 +23,7 @@ int main() {
                 printf("%4d", i*j);
             }
             else { 
-                printf("    ");
+                printf("%4s", "  ");
             }
         }
         printf("\n");
