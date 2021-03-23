@@ -1,0 +1,30 @@
+POINTERS  
+Variables and Memory address 
+เมื่อกำหนดตัวแปร (int, double, char) -> กำหนดตำแหน่งในหน่วยความจำ memory 
+eg. int num = 0;  -> เป็นการเก็นใน address ยึงใน memory 
+
+POINTERS เป็นตัวจัดการบริหารต่างๆ -> ตัวแปรประเภทนึงเก็บ memory address 
+& : ( address of ) operator ตำแหน่งที่อยู่ของตัวแปร // scanf(); 
+
+การประกาศตัวแปร POINTERS (*) นำหน้า Variable name -> pointers เก็บได้ตัวแปรชนิดเดียว 
+eg. int *pt; -> เก็บmemory address ของตัวแปร pt 
+    int *ptr_num1; 
+    double *ptr_num2; 
+    char *ptr_letter; 
+
+ตัวดำเนินการ(operator of pointers) 
+1.  & (Ampersand) address of กำหนดตัวแปน่งที่อยู่ของตัวแปรให้ pointers  
+int a = 10; 
+int *p_a; 
+    p_a = &a; 
+
+    a   | Variable |P_a 
+    10  | value    |1004 
+    1004| address  | 1020 
+
+2.  * (indirect) ใช้อ้างถึงข้อมูลหรือค่าที่เก็บไว้ใน หน่วยความจำ ตรง address ที่ pointers ชี้อยู่ 
+int num, abc; 
+int *pte_num; 
+    num = 5; 
+    ptr_num = &num; 
+    abc = *ptr_num; 
