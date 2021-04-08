@@ -1,0 +1,21 @@
+Top - Down Design 
+- เป็นการแบ่่งปัญหาหลักๆเป็นปัญหาย่อยๆ และแก้ปัญหาย่อยๆ 
+main -> func1 -> func2 -> func3 
+
+การส่งค่าข้อมูลแบบ Arrays  
+-> อ้างภึง address
+
+global variable -> ประกาศเหนือ function main 
+local variable -> มีการใช้ใน function 
+
+ต้องการ return มากกว่า 1 ค่า ใช้ได้ 2 แบบ 
+1. Arrays argument
+2. Pointer argument 
+
+Recursion function เวียนเกิด 
+1. Base cases  การหาจุดวกกลับ 
+2. Making progress การหาขั้นตอนเรียกตัวเองซ้ำ
+fac(int x) { 
+    if(x==0) return 1; 
+    else return(x * fac(x-1))
+}
