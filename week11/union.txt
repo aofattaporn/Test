@@ -1,0 +1,15 @@
+Union : คล้าบกัล struct แต่่ข้อมูลเป็นประเภทเดียวกันหมดเลย 
+
+struc structure_name { 
+    type var_name-1; 
+    .
+    .
+    type var_name-n; 
+}Structure_var; 
+// ข้อมูลหน่วยความจำเดียวเท่านั้น
+
+union data_ab { 
+    int a; 
+    char b; 
+
+} var_ab; 

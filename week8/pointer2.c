@@ -16,7 +16,7 @@ int main() {
         
     }
     pc = &name[n+1]; 
-    for (;;*pc != '\0')
+    for (i=0;*pc != '\0';i++)
     {
         printf("%c", *pc);
         pc++; 
@@ -28,6 +28,7 @@ int main() {
         printf("%c", *pc); 
         pc++;
     }
+    printf("\n"); 
     
     
     

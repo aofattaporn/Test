@@ -1,0 +1,20 @@
+Structure : เป็นการรวมกลุ่มของตัวแปร 
+struc structure_name { 
+    type var_name-1; 
+    .
+    .
+    type var_name-n; 
+}Structure_var;
+
+struc student { 
+    int id; 
+    char name[40]; 
+    char address[50];
+    int age; 
+}student;
+
+การอ้างอิง 
+    Structure_var.var_name; 
+
+struct structure_name Structure_var; // การ coppy structuur 
+    struct_stuudent_data chem, math;

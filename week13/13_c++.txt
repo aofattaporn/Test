@@ -1,0 +1,23 @@
+steram -> input, output 
+
+Liberary 0> namespace 
+cin stream 
+count steram 
+
+การรับช้อมูลจาก keybord 
+cin >> variable; 
+cin >> var1 >> var2 >> .. >> var N; 
+
+การแสดงผลข้อมูลจาก keybord 
+cout << "ข้อความที่ต้องการพูด"; 
+cout << variable; 
+
+endl -> ต้องการขึ้นบันทัดใหม่  
+
+
+Liberary in cpp -> string 
+สามารถประกาศ string name;   
+method of string class 
+- 
+
+รับค่าทั้งบรรทัดด้วย getline(); (L:string)

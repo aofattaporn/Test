@@ -1,0 +1,14 @@
+FILE (file organization)  
+1.  เรียงลำดับ (sequential file) 
+2.  แบบสุ่ม( Random file ) 
+3.  แบบเชิงดัชนี(Indexed Sequentail file )
+
+เรียงลำดับ (sequential file)  
+รวบรวมระเบียนแบบเรียงลำดับ 
+
+การเปิดแฟ้มข้อมูล(FILE) ในภาษา C 
+    FILE *fp 
+    fp = fopen(f_name, mode);   
+
+    การเขียน : fprint(file_pinter, specific, variable)
+    การอ่าน : fscanf(file_pinter, specific, variable)

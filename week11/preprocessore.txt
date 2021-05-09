@@ -1,0 +1,11 @@
+Preprocessore
+-   มีเครื่อง # นำหน้า 
+-   ประกอบด้วย Preprocessore directive 
+macro_name string : เป็นการกำหนดค่าข้อมูลที่ใช้
+                    #define PI 3.14159
+                    #define NEWLINE "\n"
+                    #define ABC(a,b,c) (a>b&&a>c)?1:0
+                    ?(conditional operator) : conditional ? result1(if true) : result2(else false) 
+#include : ใช้บอก compiler ทำการแฟ้มข้อมูลอื่น มารวมกับคำสั่งภายในที่ใช้ 
+            #include "file_name"
+            #include <"file_name"> 
