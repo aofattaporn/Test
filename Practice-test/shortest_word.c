@@ -1,10 +1,10 @@
 #include<stdio.h> 
 #include<string.h>
 int main() { 
-    char string[100]="C is a computer programming langeus.", longest[20];
+    char string[100], longest[20];
     int i, j=0, length, count = 0, min = 100, index=0, num=0, position=0;
-    // printf("Input sentence : "); 
-    // gets(string);
+    printf("Input sentence : "); 
+    gets(string);
     length = strlen(string);
     for ( i = 0; i < length; i++)
     {

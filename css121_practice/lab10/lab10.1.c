@@ -1,69 +1,52 @@
 #include<stdio.h> 
-#include <stdlib.h>
-#include<math.h>
-
+#include<string.h>
 int main() { 
-    int i, j, n, id[4]; 
-    float score[5]; 
-    char fname[5][20], lname[5][20]; 
-    FILE *fstudent;
-    fstudent = fopen("student.txt", "wt"); 
-    for ( i = 1;; i++)
+    char string[100], longest[20];
+    int i, j=0, length, count = 0, max = 0, index=0, num=0, position=0;
+    printf("Input sentence : "); 
+    gets(string);
+    length = strlen(string);
+    for ( i = 0; i < length; i++)
     {
-        printf("record no # %d\n", i); 
-        printf("Id\t : "); 
-        scanf("%d", &id[i]); 
-        if(id[i] == 0) break; 
-        printf("First name : "); 
-        scanf("%s", fname[i]);
-        printf("Last name  : ");
-        fflush(stdin);
-        scanf("%s", lname[i]);; 
-        printf("Score      : "); 
-        scanf("%f", &score[i]); 
-        fprintf(fstudent,"%d %s %s %.2f\n", id[i], fname[i], lname[i], score[i]);
+        if (string[i] != ' ')
+        {
+            count++;
+        }
+        // find a space tape
+        else{
+            // change count -> max
+            if (count > max)
+            {
+                max = count;
+                index = i - max;
+                // position++;
+            }
+            count = 0;
+            num++;   
+        }      
+    }
+     /* Checking if last word is longest */
+    if(count>max)
+    {
+        max = count;
+        index = length-max;
+    }
+    /* Using length and index copying longest word */
+    for(i=index;i<index+max;i++)
+    {
+        longest[j] = string[i];
+        j++;
+    }
+    for ( i = 0; i < index; i++)
+    {
+        if(string[i]==' ')position++;
     }
     
+    longest[j] = '\0';
+    printf("There are %d word in sentence\n",num+1);
+    printf("It is in position no.%d of the word  \n",position+1);
+    printf("The longest word consist of %d\n",max);
+    printf("This word is programming %s \n", longest);
     
-    system("clear");
 
-    float  sum=0, mean, SD=0, sumsd=0; 
-    char grade[i]; 
-    n = i -1;
-    FILE *fstudent2;
-    fstudent2 = fopen("student.txt", "rt"); 
-    
-    for ( i = 1; i <= n; i++)
-    {
-        fscanf(fstudent2,"%d %s %s %f \n",&id[i],fname[i],lname[i],&score[i]);
-        sum += score[i];
-    }
-    mean = sum / n; 
-    
-    for ( i = 1; i <= n; i++)
-    {
-        sumsd += pow((score[i]-mean), 2);
-    }
-    SD = sqrt(sumsd/n); 
-
-    for ( i = 1; i <= n; i++)
-    {
-        if(score[i]< mean-SD) grade[i] = 'F';
-        else if (score[i]< mean) grade[i] = 'D';
-        else if (score[i]< mean+SD) grade[i] = 'C';
-        else if (score[i]< mean+(2*SD)) grade[i] = 'B';
-        else grade[i] = 'A';
-            
-    }
-
-    printf("=========================================================\n");
-    printf("No.  Id        First_name     Last_name    Score    Gade \n");
-    printf("=========================================================\n");
-    for ( i = 1;i<=n; i++)
-    {
-        printf("%-5d%-10d%-15s%-13s%-5.2f%4c\n",i,id[i],fname[i],lname[i],score[i],grade[i]);
-    }
-    fclose(fstudent2);
-    
 }
-
