@@ -36,7 +36,6 @@ int main() {
             product *= div;
             for ( i = 1; i <= num; i++)
             {
-
                 if (a[i] % div == 0)
                 {
                     a[i] = a[i] / div; 

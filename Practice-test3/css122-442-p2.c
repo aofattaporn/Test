@@ -16,7 +16,7 @@ int main() {
     printf("result : %d\n", convert(base_num, base));
     printf("====================================\n");
     
-}d
+}
 int convert(char base_num[20], int base) { 
     int decimal, i, size_base, power, buff; 
     size_base = strlen(base_num);
