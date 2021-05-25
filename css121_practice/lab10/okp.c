@@ -47,19 +47,37 @@ int main()
     printf("No. Id First_name Last_name Score Grade\n");
     printf("==================================================================\n");
     // float score;
-    int id2;
+    int id2, j;
     char first2[10], last2[10];
-    float score2;
+    float score2[10];
     for(i=1;i<=n;i++)
     {
-        fscanf(student,"%d%s%s%f", &id2, first2, last2, &score2);
+        fscanf(student,"%d%s%s%f", &id2, first2, last2, &score2[i]);
         if(score[i] >= mean+2*sd){grade =  'A';}
         else if(score[i] >= mean+sd && score[i] < mean+2*sd){grade = 'B';}
         else if(score[i] >= mean && score[i] < mean+sd){grade = 'C';}
         else if(score[i] >= mean-sd && score[i] < mean){grade = 'D';}
         else if(score[i] < mean-sd){grade = 'F';}
-        printf("%-4d%-5d%10s%10s%14.2f%4c\n", i, id2, first2, &last2[i], score2, grade);
+        printf("%-4d%-5d%10s%10s%14.2f%4c\n", i, id2, first2, &last2[i], score2[i], grade);
+    }
+
+    for ( i = 10; i > 0; i--)
+    {
+        for (j = 0; j <= 2; j++)
+        {
+            if (i > score2[j])
+            {
+                printf("    ");
+            }
+            else { 
+
+                printf("   *");
+            }
+        }
+        printf("\n");
     }
     fclose(student);
+
+    
     return 0;
 }
